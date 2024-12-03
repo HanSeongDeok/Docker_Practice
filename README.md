@@ -11,3 +11,8 @@
 ``` docker commit container_ID new_Image:tag ```
 
 -  PUSH - ``` docker tag new_Image:tag myusername/myrepo:tag ```
+
+### 컨테이너간 통신 -> 동일 NETWORK안에서 RUN
+- ``` docker run -d -p 3000:3000 --network mynet --name server-container nodeserver:v2```
+
+- ``` docker run -d -p 80:80 --network mynet --name nginx-container nginx:v1 ```
