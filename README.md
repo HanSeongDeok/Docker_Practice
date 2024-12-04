@@ -16,3 +16,6 @@
 - ``` docker run -d -p 3000:3000 --network mynet --name server-container nodeserver:v2```
 
 - ``` docker run -d -p 80:80 --network mynet --name nginx-container nginx:v1 ```
+
+### 컨테이너에 DB 띄우기 (POSTGRES)
+- ``` docker run -v postgres_vol:/var/lib/postgresql/data -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=1234 postgres:17.2-bookworm ```
